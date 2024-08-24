@@ -9,10 +9,15 @@
 # AIM:
 To Develop a python program to Plot a time series data of Ev sales.
 # ALGORITHM:
-1. Import the required packages like pandas and matplot
-2. Read the dataset using the pandas
-3. Plot the data according to need and can be altered monthly, or yearly.
-4. Display the graph.
+1.Import Libraries: Import the necessary libraries like pandas for data manipulation and matplotlib.pyplot for plotting graphs.
+
+2.Load Dataset: Use pandas to read the dataset from the CSV file into a DataFrame.
+
+3.Aggregate Data: Group the data by the "year" column and sum the "value" column to get the total value for each year.
+
+4.Plot Data: Use matplotlib to plot the aggregated data as a time series. Customize the plot with titles, labels, and formatting.
+
+5.Display Graph: Render the plot using plt.show().
 # PROGRAM:
 ```py
 import pandas as pd

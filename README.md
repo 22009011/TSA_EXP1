@@ -15,31 +15,35 @@ To Develop a python program to Plot a time series data of Ev sales.
 4. Plot the data according to need and can be altered monthly, or yearly.
 5. Display the graph.
 # PROGRAM:
-```
+```py
 import pandas as pd
 import matplotlib.pyplot as plt
-data = pd.read_csv("EV.csv")
-data.head()
-data['year']=pd.to_datetime(data['year'])
-data.set_index('year',inplace=True)
-plt.plot(data.index,data['value'],label='value')
-plt.title("Year Wise EV Sales")
-plt.xlabel("year")
-plt.xticks(rotation=45)
-plt.ylabel("value")
+
+
+file_path = 'EV.csv'
+ev_data = pd.read_csv(file_path)
+
+
+ev_yearly_data = ev_data.groupby('year')['value'].sum().reset_index()
+
+plt.figure(figsize=(10, 6))
+plt.plot(ev_yearly_data['year'], ev_yearly_data['value'], marker='o', linestyle='-', color='b')
+plt.title('Global EV Data: Yearly Trend')
+plt.xlabel('Year')
+plt.ylabel('Value (Aggregated)')
 plt.grid(True)
-plt.legend()
+plt.xticks(ev_yearly_data['year'], rotation=45)
+plt.tight_layout()
 plt.show()
-```
+
+```py
 
 # Dataset:
-![image](https://github.com/user-attachments/assets/c0372d6d-54d4-42c5-ad03-d47c1490acb9)
-
+![image](https://github.com/user-attachments/assets/d279cac7-332d-4760-a233-4c78b3b1e9b8)
 
 # OUTPUT:
 
-![image](https://github.com/user-attachments/assets/2250e440-9195-4e93-bc62-443dff721ef2)
-
+![image](https://github.com/user-attachments/assets/bd563094-afa4-48dc-9cf0-fc6f3e28f7e7)
 
 
 

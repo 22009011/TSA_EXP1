@@ -50,4 +50,4 @@ plt.show()
 
 
 # RESULT:
-Thus we have created the python code for plotting the time series of given dataset.
+Thus the python code for plotting the time series of given dataset created.

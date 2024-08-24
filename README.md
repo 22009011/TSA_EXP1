@@ -4,7 +4,7 @@
 
 ###  Register No: 212222240108
 
-###  Date:  
+###  Date:   
 
 # AIM:
 To Develop a python program to Plot a time series data of Ev sales.

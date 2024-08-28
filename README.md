@@ -55,4 +55,4 @@ plt.show()
 
 
 # RESULT:
-Thus the python code for plotting the time series of given dataset created.
+The Python code successfully plotted the time series data for EV sales, showing the yearly trend. The graph includes labeled axes, a title, and a grid for clarity in visualizing the data.
